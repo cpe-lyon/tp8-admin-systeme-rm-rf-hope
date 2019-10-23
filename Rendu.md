@@ -19,11 +19,14 @@ Un nouveau groupe de machine cliente à donc été mis en place:
 
 ```
 /etc/ansible/hosts
+
 ...
-...
+
 [servers]
 node
+
 ...
+
 ```
 PS: node réfère à l'adresse IP de la VM node installé précédemment.
 
