@@ -14,8 +14,14 @@ La configuration des machines à été effectué sur virtualbox et VMWare. Une m
 Sur VMWare, les VM ont été directement raccordé au réseau du poste hôte pour obtenir leurs propre adresse IP du DHCP. Cela simplifie la gestion des adresse IP ainsi que les connexions en SSH pour pouvoir effectuer deux connexion SSH en même temps (pur comfort).
 
 Conformément à la [documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#basics-what-will-be-installed), Ansible à été installé via le gestion de packet apt sur la VM superviseur. 
+```
+$ sudo apt update
+$ sudo apt install software-properties-common
+$ sudo apt-add-repository --yes --update ppa:ansible/ansible
+$ sudo apt install ansible
+```
 
-Un nouveau groupe de machine cliente à donc été mis en place:
+Une fois l'installation effectué avec succès, un nouveau groupe de machine cliente à donc été mis en place:
 
 ```
 /etc/ansible/hosts
