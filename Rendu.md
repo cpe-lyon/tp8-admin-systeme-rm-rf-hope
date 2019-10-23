@@ -39,5 +39,11 @@ PS: node réfère à l'adresse IP de la VM node installé précédemment.
 Dans le cas ou nous aurions plus de machine cibles avec lesquels nous souhaiterions intéragir, nous avons juste à rajouter leurs adresse IP à cette liste.
 
 Pour automatiser la connexion par SSH nous avons mis en place une clè d'authentification conformément à la  [documentation SSH](https://www.ssh.com/ssh/copy-id#sec-Generate-an-SSH-Key). 
+```
+$ ssh-keygen
+...
+$ ssh-copy-id -i .ssh/id_rsa.pub serveur@node
+```
+Le but de cette clès est d'éviter l'opération de saisi de mot de passe. Cela n'est pas essentiel à Ansible mais cela facilite son utilisation.
 
 ## Exercice 2 Tâche à réaliser
