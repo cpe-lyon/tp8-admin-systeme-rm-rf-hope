@@ -47,3 +47,17 @@ $ ssh-copy-id -i .ssh/id_rsa.pub serveur@node
 Le but de cette clès est d'éviter l'opération de saisi de mot de passe. Cela n'est pas essentiel à Ansible mais cela facilite son utilisation.
 
 ## Exercice 2 Tâche à réaliser
+
+```             
+---
+- hosts: servers
+  become: yes
+  remote_user: serveur
+  tasks:
+  - name: install git, tmux, screen
+    shell: apt-get install {{ item }} -y
+    loop:
+       - git
+       - tmux
+       - screen
+```
